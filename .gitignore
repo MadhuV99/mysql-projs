@@ -1,0 +1,8 @@
+*.pyc
+*.zip
+*.dump
+/env
+/.env
+/.idea
+/node_modules 
+

@@ -1,0 +1,13 @@
+cd C:/Users/madhu/projects/mysql-projs
+echo "# mysql-projs" >> README.md
+git init
+git add -A
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/MadhuV99/mysql-projs.git
+git push -u origin main 
+
+git add -A 
+git commit -m "Latest Commit" 
+git push shinjuLast1MM 
+

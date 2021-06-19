@@ -1,0 +1,13 @@
+id,last_name,first_name,date_of_birth,enrollment_date
+1,Test,Student,2001-09-01,NULL
+2,Test1,Student1,2001-01-01,2019-03-01
+3,Test2,Student2,2001-02-01,NULL
+4,Test3,Student3,2001-03-01,2019-03-01
+5,Test4,Student4,2001-04-01,NULL
+6,Test5,Student5,2001-05-01,2019-03-01
+7,Test6,Student6,2001-06-01,NULL
+8,Test7,Student7,2001-07-01,NULL
+9,Test8,Student8,2001-08-01,NULL
+12,Williams,Trevor,2000-12-09,NULL
+13,Reid,Matthew,1989-09-01,2019-05-01
+14,Small,Beverly,1990-01-01,NULL
