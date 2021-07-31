@@ -1,5 +1,47 @@
 use employees;
 
+
+select * from employees as emp
+left outer join titles as ttl 
+on emp.emp_no = ttl.emp_no and ttl.to_date = '9999-01-01'
+where ttl.emp_no is null
+;
+
+select count(*) from employees as emp
+left outer join titles as ttl 
+on emp.emp_no = ttl.emp_no
+where emp.emp_no not in (
+select distinct emp_no from titles where to_date = '9999-01-01' 
+)
+;
+
+select count(*) from employees;
+
+select distinct emp_no from titles where to_date = '9999-01-01' ;
+
+select emp.emp_no, dm.emp_no, first_name, last_name from employees as emp 
+	left join dept_manager as dm 
+    on emp.emp_no = dm.emp_no
+    where emp.emp_no = dm.emp_no
+    order by emp.emp_no;
+    
+select * from employees as emp 
+	left join dept_manager as dm 
+    on emp.emp_no = dm.emp_no
+    order by emp.emp_no;
+    
+select * from employees as emp 
+	inner join dept_manager as dm 
+    on emp.emp_no = dm.emp_no
+    -- where to_date = '9999-01-01'
+    order by emp.emp_no;
+
+select * from dept_manager 
+where to_date = '9999-01-01'
+order by emp_no;
+
+select * from employees where emp_no not in (select emp_no from dept_manager);
+
 select dept_name, emp.emp_no, first_name, last_name , 'Manager' as emp_type
 from employees as emp
 join dept_manager as dm on  emp.emp_no = dm.emp_no
